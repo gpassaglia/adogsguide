@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dog-Friendly Restaurants in London — A Dog's Guide</title>
+  <meta name="description" content="The best dog-friendly restaurants in London, grouped by neighbourhood and rated on the Golden Paw Scale." />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+</head>
+<body>
+
+  <site-nav root="../"></site-nav>
+
+  <!-- ─── Intro ─── -->
+  <div class="dest-intro">
+    <div class="container">
+      <p class="dest-breadcrumb">
+        <a href="../london.html"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i> London</a>
+        <span>›</span> Restaurants
+      </p>
+      <h1>Restaurants</h1>
+      <p class="dest-intro-desc">Every restaurant below has been independently researched and rated on the Golden Paw Scale. Dogs inside — not just tolerated on the terrace.</p>
+    </div>
+  </div>
+
+  <!-- ─── Neighbourhood list ─── -->
+  <section class="venue-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Browse by area</p>
+        <h2>Neighbourhoods</h2>
+      </div>
+      <div class="venue-list">
+
+        <a href="restaurants/charlotte-street.html" class="dest-subpage-card">
+          <div class="dest-subpage-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+          <h3>Charlotte Street</h3>
+          <span class="dest-card-link">View</span>
+        </a>
+
+        <a href="restaurants/islington.html" class="dest-subpage-card">
+          <div class="dest-subpage-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+          <h3>Islington</h3>
+          <span class="dest-card-link">View</span>
+        </a>
+
+        <a href="restaurants/marylebone.html" class="dest-subpage-card">
+          <div class="dest-subpage-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+          <h3>Marylebone</h3>
+          <span class="dest-card-link">View</span>
+        </a>
+
+        <a href="restaurants/notting-hill.html" class="dest-subpage-card">
+          <div class="dest-subpage-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+          <h3>Notting Hill</h3>
+          <span class="dest-card-link">View</span>
+        </a>
+
+        <a href="restaurants/victoria.html" class="dest-subpage-card">
+          <div class="dest-subpage-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+          <h3>Victoria</h3>
+          <span class="dest-card-link">View</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Map ─── -->
+  <section class="venue-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">All locations</p>
+        <h2>Map View</h2>
+      </div>
+    </div>
+    <div class="venue-map-wrap">
+      <div id="map"></div>
+    </div>
+  </section>
+
+  <site-footer type="london" root="../"></site-footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script>
+    const map = L.map('map', { zoomControl: true }).setView([51.510, -0.150], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 18
+    }).addTo(map);
+
+    function makePin(color) {
+      return L.divIcon({
+        className: '',
+        html: `<svg width="28" height="38" viewBox="0 0 28 38" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 0C6.27 0 0 6.27 0 14c0 9.625 14 24 14 24s14-14.375 14-24C28 6.27 21.73 0 14 0z" fill="${color}" stroke="#fff" stroke-width="2"/>
+          <circle cx="14" cy="14" r="5" fill="#fff" opacity="0.9"/>
+        </svg>`,
+        iconSize: [28, 38],
+        iconAnchor: [14, 38],
+        popupAnchor: [0, -40]
+      });
+    }
+
+    const goldIcon   = makePin('#C9A045');
+    const silverIcon = makePin('#9B9B9B');
+    const bronzeIcon = makePin('#CD7F32');
+
+    const restaurants = [
+      { name: 'Mowgli', area: 'Charlotte Street', lat: 51.5196, lng: -0.1353, rating: 'Golden Paw', icon: goldIcon, url: 'restaurants/charlotte-street.html' },
+      { name: 'Bellanger', area: 'Islington', lat: 51.5386, lng: -0.1044, rating: 'Golden Paw', icon: goldIcon, url: 'restaurants/islington.html' },
+      { name: 'Carlotta', area: 'Marylebone', lat: 51.5192, lng: -0.1572, rating: 'Silver', icon: silverIcon, url: 'restaurants/marylebone.html' },
+      { name: 'Los Mochis', area: 'Notting Hill', lat: 51.5128, lng: -0.2044, rating: 'Bronze', icon: bronzeIcon, url: 'restaurants/notting-hill.html' },
+      { name: 'The Orange', area: 'Victoria', lat: 51.4949, lng: -0.1425, rating: 'Silver', icon: silverIcon, url: 'restaurants/victoria.html' },
+    ];
+
+    restaurants.forEach(r => {
+      L.marker([r.lat, r.lng], { icon: r.icon })
+        .addTo(map)
+        .bindPopup(`<strong>${r.name}</strong><br>${r.area}<br><a href="${r.url}">View →</a>`);
+    });
+  </script>
+
+  <script src="../components.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>
