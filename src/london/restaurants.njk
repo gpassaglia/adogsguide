@@ -71,11 +71,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const iconMap = { gold: makePin('#C9A045'), silver: makePin('#9B9B9B'), bronze: makePin('#CD7F32') };
 
-  const restaurants = [
-    {% for item in london_restaurants %}{% for venue in item.venues %}
-    { name: {{ venue.name | dump }}, area: {{ item.neighbourhood | dump }}, lat: {{ venue.lat }}, lng: {{ venue.lng }}, rating: {{ venue.rating | dump }}, url: '/london/restaurants/{{ item.slug }}/' },
-    {% endfor %}{% endfor %}
-  ];
+  const _data = {{ london_restaurants | dump | safe }};
+  const restaurants = [];
+  _data.forEach(function(hood) {
+    hood.venues.forEach(function(v) {
+      restaurants.push({ name: v.name, area: hood.neighbourhood, lat: v.lat, lng: v.lng, rating: v.rating, url: '/london/restaurants/' + hood.slug + '/' });
+    });
+  });
 
   restaurants.forEach(r => {
     L.marker([r.lat, r.lng], { icon: iconMap[r.rating] || iconMap.gold })
