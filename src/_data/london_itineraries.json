@@ -34,13 +34,6 @@
     "theme": "South West to South East · Full day",
     "description": "A riverside morning, a Thames boat crossing, one of London's most iconic walks and dinner on Bermondsey Street — all with your dog.",
     "heroImage": "itinerary-battersea.webp",
-    "glance": [
-      "🌳 Battersea Park — morning walk",
-      "🏭 Battersea Power Station — lunch",
-      "⛵ Uber Boat — Thames crossing",
-      "🌉 Tower Bridge — afternoon explore",
-      "🍝 Baccalà — dinner"
-    ],
     "stops": [
       {
         "number": "01",

@@ -51,6 +51,7 @@ extraCss:
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
+document.addEventListener('DOMContentLoaded', function () {
   const map = L.map('map', { zoomControl: true }).setView([51.510, -0.150], 12);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -81,4 +82,5 @@ extraCss:
       .addTo(map)
       .bindPopup(`<strong>${r.name}</strong><br>${r.area}<br><a href="${r.url}">View →</a>`);
   });
+});
 </script>
