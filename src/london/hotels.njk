@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+title: "Dog-Friendly Hotels in London — A Dog's Guide"
+description: "The best dog-friendly hotels in London, grouped by area and rated on the Golden Paw Scale."
+footerType: london
+permalink: /london/hotels/
+---
+
+<div class="dest-intro">
+  <div class="container">
+    <p class="dest-breadcrumb">
+      <a href="/london/"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i> London</a>
+      <span>›</span> Hotels
+    </p>
+    <h1>Hotels</h1>
+    <p class="dest-intro-desc">Independently verified — fees, size limits and dog policies confirmed before we publish.</p>
+  </div>
+</div>
+
+<section class="venue-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Browse by area</p>
+      <h2>Areas</h2>
+    </div>
+    <div class="venue-list">
+      {% for item in london_hotels %}
+      <a href="/london/hotels/{{ item.slug }}/" class="dest-subpage-card">
+        <div class="dest-subpage-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+        <h3>{{ item.area }}</h3>
+        <span class="dest-card-link">View</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: london_hotels
+  size: 1
+  alias: area
+permalink: "/london/hotels/{{ area.slug }}/"
+footerType: london
+eleventyComputed:
+  title: "Dog-Friendly Hotels in {{ area.area }}, London — A Dog's Guide"
+  description: "Dog-friendly hotels in {{ area.area }}, London — independently rated on the Golden Paw Scale."
+---
+
+<div class="dest-intro">
+  <div class="container">
+    <p class="dest-breadcrumb">
+      <a href="/london/hotels/"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Hotels</a>
+      <span>›</span> {{ area.area }}
+    </p>
+    <h1>Hotels in {{ area.area }}</h1>
+    <p class="dest-intro-desc">Independently verified — fees, size limits and policies confirmed before we publish.</p>
+  </div>
+</div>
+
+<section class="venue-section">
+  <div class="container">
+    <div class="venue-list">
+      {% for venue in area.venues %}
+      <div class="venue-card">
+        <div class="venue-card-top">
+          <h4>{{ venue.name }}</h4>
+          {% if venue.rating == 'gold' %}
+          <span class="rating-tag rating-tag--gold"><i class="fa-solid fa-paw" aria-hidden="true"></i> Golden Paw</span>
+          {% elif venue.rating == 'silver' %}
+          <span class="rating-tag rating-tag--silver"><i class="fa-solid fa-paw" aria-hidden="true"></i> Silver</span>
+          {% elif venue.rating == 'bronze' %}
+          <span class="rating-tag rating-tag--bronze"><i class="fa-solid fa-paw" aria-hidden="true"></i> Bronze</span>
+          {% endif %}
+        </div>
+        <p>{{ venue.description }}</p>
+        <div class="venue-card-actions">
+          <a href="{{ venue.website }}" class="venue-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Website</a>
+          {% if venue.bookUrl and venue.bookUrl != '#' %}
+          <a href="{{ venue.bookUrl }}" class="venue-btn" target="_blank" rel="noopener"><i class="fa-solid fa-calendar" aria-hidden="true"></i> Book</a>
+          {% endif %}
+          <a href="{{ venue.mapsUrl }}" class="venue-btn" target="_blank" rel="noopener"><i class="fa-solid fa-map-pin" aria-hidden="true"></i> Map</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

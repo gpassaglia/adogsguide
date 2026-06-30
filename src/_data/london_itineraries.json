@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Hyde Park to Notting Hill",
+    "slug": "hyde-park-notting-hill",
+    "theme": "West London · Half-day afternoon",
+    "description": "An off-lead run, a wander through one of London's most iconic neighbourhoods, and dinner at a Bronze-rated dog-friendly restaurant.",
+    "heroImage": "itinerary-hyde-park.png",
+    "stops": [
+      {
+        "number": "01",
+        "name": "Hyde Park — off-lead area",
+        "description": "Start with an off-lead run along the Long Water. The Diana Memorial Fountain area has a large off-lead section — one of the most generous in central London. Go early to beat the crowds."
+      },
+      {
+        "number": "02",
+        "name": "Serpentine Bar & Kitchen — lunch",
+        "description": "Dogs are welcome on the terrace. Good for a relaxed lunch with views over the Serpentine. Nothing fancy — but the setting does the work."
+      },
+      {
+        "number": "03",
+        "name": "Portobello Road — afternoon wander",
+        "description": "Head north into Notting Hill. Portobello Road on a weekend is busy, so keep your dog close — but the market stalls and side streets are worth it. Plenty of cafés with outside space along the way."
+      },
+      {
+        "number": "04",
+        "name": "Los Mochis — dinner",
+        "description": "A Mexican-Japanese restaurant that welcomes dogs. Rated Bronze on the Golden Paw Scale — dogs are welcome, terrace available. Book ahead, especially on weekends."
+      }
+    ]
+  },
+  {
+    "title": "Battersea to Borough Market",
+    "slug": "battersea-borough-market",
+    "theme": "South West to South East · Full day",
+    "description": "A riverside morning, a Thames boat crossing, one of London's most iconic walks and dinner on Bermondsey Street — all with your dog.",
+    "heroImage": "itinerary-battersea.png",
+    "glance": [
+      "🌳 Battersea Park — morning walk",
+      "🏭 Battersea Power Station — lunch",
+      "⛵ Uber Boat — Thames crossing",
+      "🌉 Tower Bridge — afternoon explore",
+      "🍝 Baccalà — dinner"
+    ],
+    "stops": [
+      {
+        "number": "01",
+        "name": "Battersea Park",
+        "description": "Your starting point. The park has a long off-lead area along the riverside — a perfect way to burn off some energy before heading into the city. Go early and take the river path."
+      },
+      {
+        "number": "02",
+        "name": "Battersea Power Station — lunch",
+        "description": "A short walk from the park. Several restaurants here welcome dogs — it's a good opportunity to let your dog settle before the boat. The full current list is maintained by the venue and linked in our bio."
+      },
+      {
+        "number": "03",
+        "name": "Uber Boat by Thames Clippers",
+        "description": "Board at Battersea Power Station Pier. Dogs travel free and the journey to Tower Bridge takes around 30 minutes. Sit on the open-air deck if the weather holds — genuinely one of the best views London has to offer."
+      },
+      {
+        "number": "04",
+        "name": "Tower Bridge",
+        "description": "Get off at London Bridge City Pier and walk along the south bank towards the bridge. The area gets busy in the afternoon so keep your dog close, but the riverside walk between the pier and Borough Market is one of those iconic London moments that still gets you every time."
+      },
+      {
+        "number": "05",
+        "name": "Baccalà · Bermondsey Street",
+        "description": "A 12-minute walk from Tower Bridge brings you to Bermondsey Street — one of the most dog-friendly streets in London. Baccalà is a great Italian seafood restaurant that genuinely welcomes dogs. Book ahead. You and your dog will have earned the rest."
+      }
+    ]
+  }
+]

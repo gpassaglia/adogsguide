@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: london_itineraries
+  size: 1
+  alias: itinerary
+permalink: "/london/itineraries/{{ itinerary.slug }}/"
+footerType: london
+eleventyComputed:
+  title: "{{ itinerary.title }} — A Dog's Guide to London"
+  description: "{{ itinerary.description }}"
+---
+
+<div class="dest-intro">
+  <div class="container">
+    <p class="dest-breadcrumb">
+      <a href="/london/itineraries/"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Itineraries</a>
+      <span>›</span> {{ itinerary.title }}
+    </p>
+    <p class="itinerary-theme">{{ itinerary.theme }}</p>
+    <h1>{{ itinerary.title }}</h1>
+    <p class="dest-intro-desc">{{ itinerary.description }}</p>
+  </div>
+</div>
+
+<div class="itinerary-hero">
+  <img src="/images/{{ itinerary.heroImage }}" alt="{{ itinerary.title }} itinerary" />
+</div>
+
+<section class="venue-section">
+  <div class="container">
+
+    {% if itinerary.glance %}
+    <p class="itinerary-glance">
+      {% for item in itinerary.glance %}
+      <span>{{ item }}</span>
+      {% endfor %}
+    </p>
+    {% endif %}
+
+    <div class="itinerary-stops">
+      {% for stop in itinerary.stops %}
+      <div class="itinerary-stop">
+        <p class="itinerary-stop-label">Stop {{ stop.number }}</p>
+        <h4>{{ stop.name }}</h4>
+        <p>{{ stop.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

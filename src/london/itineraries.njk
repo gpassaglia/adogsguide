@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: "Dog-Friendly Itineraries in London — A Dog's Guide"
+description: "Full-day and half-day dog-friendly London itineraries — planned routes with stops, timings and venue ratings."
+footerType: london
+permalink: /london/itineraries/
+---
+
+<div class="dest-intro">
+  <div class="container">
+    <p class="dest-breadcrumb">
+      <a href="/london/"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i> London</a>
+      <span>›</span> Itineraries
+    </p>
+    <h1>Itineraries</h1>
+    <p class="dest-intro-desc">Planned routes for a full day out with your dog — stops, timings and venue ratings included.</p>
+  </div>
+</div>
+
+<section class="venue-section">
+  <div class="container">
+    <div class="venue-list">
+      {% for itinerary in london_itineraries %}
+      <a href="/london/itineraries/{{ itinerary.slug }}/" class="dest-subpage-card">
+        <div class="dest-subpage-icon"><i class="fa-solid fa-route" aria-hidden="true"></i></div>
+        <h3>{{ itinerary.title }}</h3>
+        <p class="itinerary-theme" style="margin: 0.25rem 0 0; font-size: 0.85rem;">{{ itinerary.theme }}</p>
+        <span class="dest-card-link">View route</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

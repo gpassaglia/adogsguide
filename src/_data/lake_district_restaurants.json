@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Queen's Head",
+    "rating": "gold",
+    "description": "A 17th-century coaching inn in Troutbeck with a proper welcome for dogs — inside at any table, water bowl on arrival, and biscuits behind the bar. The food is serious too: locally sourced, seasonal and genuinely good. One of the best pub lunches in the Lakes.",
+    "website": "https://queensheadtroutbeck.pub/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Queens+Head+Troutbeck+Lake+District"
+  },
+  {
+    "name": "Wateredge Inn",
+    "rating": "gold",
+    "description": "Right on the shores of Windermere with a dog-friendly bar, terrace and beer garden. Dogs welcome inside throughout. Lovely spot for a long lunch after a morning walk — the terrace views are hard to beat.",
+    "website": "https://www.inncollectiongroup.com/wateredge-inn/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Wateredge+Inn+Ambleside+Windermere"
+  },
+  {
+    "name": "Dog & Gun",
+    "rating": "silver",
+    "description": "Keswick's most dog-friendly pub — the name says it all. Dogs welcome throughout, good honest pub food, and a warm welcome even when your dog is wet and muddy from the fells. A solid base for any Keswick day.",
+    "website": "https://www.greeneking.co.uk/pubs/cumbria/dog-and-gun",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Dog+and+Gun+Keswick+Lake+District"
+  },
+  {
+    "name": "Sticklebarn",
+    "rating": "silver",
+    "description": "A National Trust pub at the foot of the Langdale Pikes — perfectly placed for post-walk food and drinks. Dogs welcome throughout. Gets very busy on weekends; arrive early or book ahead.",
+    "website": "https://lantyslee.com/langdale/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sticklebarn+Great+Langdale+Lake+District"
+  },
+  {
+    "name": "Punch Bowl Inn",
+    "rating": "silver",
+    "description": "A Michelin-recommended inn in the Lyth Valley with a genuinely dog-friendly dining room. Dogs welcome in the bar and certain dining areas — call ahead to confirm on the day. Excellent food, relaxed atmosphere.",
+    "website": "https://www.the-punchbowl.co.uk/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Punch+Bowl+Inn+Crosthwaite+Lyth+Valley+Lake+District"
+  }
+]

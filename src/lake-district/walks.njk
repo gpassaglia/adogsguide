@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: "Dog-Friendly Walks in the Lake District — A Dog's Guide"
+description: "Five dog-friendly walks in the Lake District — from easy tarn loops to open fell summits."
+footerType: lake-district
+permalink: /lake-district/walks/
+---
+
+<div class="dest-intro">
+  <div class="container">
+    <p class="dest-breadcrumb">
+      <a href="/lake-district/"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Lake District</a>
+      <span>›</span> Walks
+    </p>
+    <h1>Lake District Walks</h1>
+    <p class="dest-intro-desc">Five walks your dog will love — from a gentle tarn loop to open fell with long off-lead stretches. All personally selected for dog-friendliness, not just scenery.</p>
+  </div>
+</div>
+
+<section class="venue-section">
+  <div class="container">
+    <div class="itinerary-stops">
+      {% for walk in lake_district_walks %}
+      <div class="itinerary-stop">
+        <p class="itinerary-stop-label">{{ walk.label }}</p>
+        <h4>{{ walk.name }}</h4>
+        <p>{{ walk.description }}</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">{{ walk.subtitle }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

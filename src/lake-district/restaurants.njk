@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+title: "Dog-Friendly Restaurants in the Lake District — A Dog's Guide"
+description: "Dog-friendly restaurants in the Lake District — independently rated on the Golden Paw Scale."
+footerType: lake-district
+permalink: /lake-district/restaurants/
+---
+
+<div class="dest-intro">
+  <div class="container">
+    <p class="dest-breadcrumb">
+      <a href="/lake-district/"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Lake District</a>
+      <span>›</span> Restaurants
+    </p>
+    <h1>Lake District Restaurants</h1>
+    <p class="dest-intro-desc">Independently researched and rated on the Golden Paw Scale.</p>
+  </div>
+</div>
+
+<section class="venue-section">
+  <div class="container">
+    <div class="venue-list">
+      {% for venue in lake_district_restaurants %}
+      <div class="venue-card">
+        <div class="venue-card-top">
+          <h4>{{ venue.name }}</h4>
+          {% if venue.rating == 'gold' %}
+          <span class="rating-tag rating-tag--gold"><i class="fa-solid fa-paw" aria-hidden="true"></i> Golden Paw</span>
+          {% elif venue.rating == 'silver' %}
+          <span class="rating-tag rating-tag--silver"><i class="fa-solid fa-paw" aria-hidden="true"></i> Silver</span>
+          {% elif venue.rating == 'bronze' %}
+          <span class="rating-tag rating-tag--bronze"><i class="fa-solid fa-paw" aria-hidden="true"></i> Bronze</span>
+          {% endif %}
+        </div>
+        <p>{{ venue.description }}</p>
+        <div class="venue-card-actions">
+          <a href="{{ venue.website }}" class="venue-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Website</a>
+          <a href="{{ venue.mapsUrl }}" class="venue-btn" target="_blank" rel="noopener"><i class="fa-solid fa-map-pin" aria-hidden="true"></i> Map</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: london_restaurants
+  size: 1
+  alias: neighbourhood
+permalink: "/london/restaurants/{{ neighbourhood.slug }}/"
+footerType: london
+eleventyComputed:
+  title: "Dog-Friendly Restaurants in {{ neighbourhood.neighbourhood }}, London — A Dog's Guide"
+  description: "Dog-friendly restaurants in {{ neighbourhood.neighbourhood }}, London — independently rated on the Golden Paw Scale."
+---
+
+<div class="dest-intro">
+  <div class="container">
+    <p class="dest-breadcrumb">
+      <a href="/london/restaurants/"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Restaurants</a>
+      <span>›</span> {{ neighbourhood.neighbourhood }}
+    </p>
+    <h1>Restaurants in {{ neighbourhood.neighbourhood }}</h1>
+    <p class="dest-intro-desc">Independently researched and rated on the Golden Paw Scale.</p>
+  </div>
+</div>
+
+<section class="venue-section">
+  <div class="container">
+    <div class="venue-list">
+      {% for venue in neighbourhood.venues %}
+      <div class="venue-card">
+        <div class="venue-card-top">
+          <h4>{{ venue.name }}</h4>
+          {% if venue.rating == 'gold' %}
+          <span class="rating-tag rating-tag--gold"><i class="fa-solid fa-paw" aria-hidden="true"></i> Golden Paw</span>
+          {% elif venue.rating == 'silver' %}
+          <span class="rating-tag rating-tag--silver"><i class="fa-solid fa-paw" aria-hidden="true"></i> Silver</span>
+          {% elif venue.rating == 'bronze' %}
+          <span class="rating-tag rating-tag--bronze"><i class="fa-solid fa-paw" aria-hidden="true"></i> Bronze</span>
+          {% endif %}
+        </div>
+        <p>{{ venue.description }}</p>
+        <div class="venue-card-actions">
+          <a href="{{ venue.website }}" class="venue-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Website</a>
+          <a href="{{ venue.mapsUrl }}" class="venue-btn" target="_blank" rel="noopener"><i class="fa-solid fa-map-pin" aria-hidden="true"></i> Map</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

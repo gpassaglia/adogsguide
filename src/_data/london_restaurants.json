@@ -1,0 +1,77 @@
+[
+  {
+    "neighbourhood": "Charlotte Street",
+    "slug": "charlotte-street",
+    "venues": [
+      {
+        "name": "Mowgli",
+        "rating": "gold",
+        "description": "Inside. Water bowl. Warm staff. A stunning Indian street food restaurant where dogs are fully inside — not near a door. One of our favourites in London.",
+        "website": "https://mowglistreetfood.com/restaurants/london/",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mowgli+5+Charlotte+Street+London+W1T+1RE",
+        "lat": 51.5196,
+        "lng": -0.1353
+      }
+    ]
+  },
+  {
+    "neighbourhood": "Islington",
+    "slug": "islington",
+    "venues": [
+      {
+        "name": "Bellanger",
+        "rating": "gold",
+        "description": "Inside. Water bowl. Outstanding staff. Homemade dog biscuits on arrival. A Parisian brasserie that treats your dog as well as it treats you.",
+        "website": "https://bellanger.co.uk/",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bellanger+9+Islington+Green+London",
+        "lat": 51.5386,
+        "lng": -0.1044
+      }
+    ]
+  },
+  {
+    "neighbourhood": "Marylebone",
+    "slug": "marylebone",
+    "venues": [
+      {
+        "name": "Carlotta",
+        "rating": "silver",
+        "description": "Inside. Water bowl on arrival. Friendly staff. An elegant Italian-American restaurant that gets it right — your dog will feel as welcome as you do.",
+        "website": "https://www.bigmammagroup.com/italian-restaurants/carlotta",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Carlotta+77+Marylebone+High+Street+London+W1U+5JX",
+        "lat": 51.5192,
+        "lng": -0.1572
+      }
+    ]
+  },
+  {
+    "neighbourhood": "Notting Hill",
+    "slug": "notting-hill",
+    "venues": [
+      {
+        "name": "Los Mochis",
+        "rating": "bronze",
+        "description": "Inside & terrace. Water bowl. Welcoming staff. Mexican-Japanese fusion in Notting Hill. Call ahead to confirm dog access on the day.",
+        "website": "https://www.losmochis.co.uk/nh/notting-hill",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Los+Mochis+Notting+Hill+London",
+        "lat": 51.5128,
+        "lng": -0.2044
+      }
+    ]
+  },
+  {
+    "neighbourhood": "Victoria",
+    "slug": "victoria",
+    "venues": [
+      {
+        "name": "The Orange",
+        "rating": "silver",
+        "description": "Inside. Water bowl. Good staff. An award-winning gastropub in a Victorian townhouse with a sustainable menu. Dogs genuinely welcome.",
+        "website": "https://www.cubitthouse.co.uk/the-orange-boutique-hotel-belgravia/",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Orange+37+Pimlico+Road+London+SW1W+8NE",
+        "lat": 51.4949,
+        "lng": -0.1425
+      }
+    ]
+  }
+]

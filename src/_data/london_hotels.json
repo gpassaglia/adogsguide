@@ -1,0 +1,66 @@
+[
+  {
+    "area": "City of London",
+    "slug": "city-of-london",
+    "venues": [
+      {
+        "name": "Vintry & Mercer Hotel",
+        "rating": "gold",
+        "description": "Dog basket & bowl in room. Welcome in Vintry Kitchen & Mercer Terrace. No fee. Size limit TBC — verify with hotel before booking.",
+        "website": "https://www.vintryandmercer.com/",
+        "bookUrl": "#",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Vintry+Mercer+Hotel+City+of+London"
+      }
+    ]
+  },
+  {
+    "area": "South Bank",
+    "slug": "south-bank",
+    "venues": [
+      {
+        "name": "Sea Containers London",
+        "rating": "silver",
+        "description": "Up to 9kg. £35/stay + £100 deposit. Dogs not left alone. Dog blanket, bowl & welcome treat provided. Dogs welcome in restaurant.",
+        "website": "https://www.seacontainerslondon.com/",
+        "bookUrl": "#",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sea+Containers+London+20+Upper+Ground+South+Bank+SE1+9PD"
+      },
+      {
+        "name": "Park Plaza County Hall",
+        "rating": "silver",
+        "description": "Any size. £25/night. Up to 2 dogs. Food & water bowls provided. Left alone policy TBC — confirm with hotel before booking.",
+        "website": "https://www.parkplazacountyhall.com/",
+        "bookUrl": "#",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Park+Plaza+County+Hall+London"
+      }
+    ]
+  },
+  {
+    "area": "Canary Wharf",
+    "slug": "canary-wharf",
+    "venues": [
+      {
+        "name": "Novotel London Canary Wharf",
+        "rating": "bronze",
+        "description": "Any size. £25/night. Waterfront setting. Left alone policy TBC — confirm with hotel before booking.",
+        "website": "https://all.accor.com/hotel/9057/index.en.shtml",
+        "bookUrl": "#",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Novotel+London+Canary+Wharf+40+Marsh+Wall+London+E14+9TP"
+      }
+    ]
+  },
+  {
+    "area": "Chelsea",
+    "slug": "chelsea",
+    "venues": [
+      {
+        "name": "The Cadogan, a Belmond Hotel",
+        "rating": "gold",
+        "description": "Any size. No fee. Dogs not left alone. Food bowls & grooming services available. One of London's finest dog-friendly stays.",
+        "website": "https://www.belmond.com/hotels/europe/uk/london/belmond-cadogan-hotel/",
+        "bookUrl": "#",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Cadogan+Belmond+Hotel+75+Sloane+Street+London"
+      }
+    ]
+  }
+]

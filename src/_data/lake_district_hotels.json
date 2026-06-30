@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Armathwaite Hall Hotel & Spa",
+    "rating": "gold",
+    "description": "400 acres of private woodland overlooking Bassenthwaite Lake. Ground floor rooms open directly onto the gardens. Dog bed, treats and waste bags on arrival — plus a doggy hairdryer in the lounge. Dogs welcome in the Hall Lounge 10am–7pm. £25 per dog per night.",
+    "website": "https://www.armathwaite-hall.com/",
+    "bookUrl": "https://www.armathwaite-hall.com/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Armathwaite+Hall+Hotel+Bassenthwaite+Lake+District"
+  },
+  {
+    "name": "Another Place, The Lake",
+    "rating": "gold",
+    "description": "18 acres on Ullswater with a private shoreline where well-behaved dogs can go off-lead. Dogs welcome in the Living Space bar and Glasshouse restaurant. Baby monitor available to borrow if dining in the main restaurant. £15 per dog per night.",
+    "website": "https://another.place/the-lake",
+    "bookUrl": "https://another.place/the-lake",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Another+Place+The+Lake+Ullswater"
+  },
+  {
+    "name": "Bridge Hotel · Buttermere",
+    "rating": "silver",
+    "description": "All standard rooms are dog-friendly and the Walker's Bar has its own dedicated dog menu. Gravy bones kept behind the bar, welcome pack on arrival, and one of the most spectacular fell backdrops of any hotel in the Lakes. £12 per dog per night.",
+    "website": "https://thebridgehotel.uk/",
+    "bookUrl": "https://thebridgehotel.uk/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bridge+Hotel+Buttermere+Lake+District"
+  },
+  {
+    "name": "Swan Hotel & Spa · Newby Bridge",
+    "rating": "silver",
+    "description": "At the foot of Lake Windermere with a dog-friendly pub — the Swan Inn — right on site. Dogs welcome in the pub while you eat or drink, with dog bowls provided. Hotel pool and health club access included. Self-catering cottages also accept dogs. £25 per dog per night.",
+    "website": "https://www.swanhotel.com/",
+    "bookUrl": "https://www.swanhotel.com/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Swan+Hotel+Spa+Newby+Bridge+Windermere"
+  },
+  {
+    "name": "Daffodil Hotel & Spa · Grasmere",
+    "rating": "silver",
+    "description": "On the shores of Grasmere with stunning lake views. Dogs welcome in select bedrooms, reception, lounge and grounds. Dine with your dog in the lounge or on the terrace in summer. £25 per dog per night.",
+    "website": "https://www.crerarhotels.com/collection/daffodil-hotel-and-spa/",
+    "bookUrl": "https://www.crerarhotels.com/collection/daffodil-hotel-and-spa/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Daffodil+Hotel+Spa+Grasmere+Lake+District"
+  }
+]

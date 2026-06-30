@@ -1,0 +1,84 @@
+---
+layout: layouts/base.njk
+title: "Dog-Friendly Restaurants in London — A Dog's Guide"
+description: "The best dog-friendly restaurants in London, grouped by neighbourhood and rated on the Golden Paw Scale."
+footerType: london
+permalink: /london/restaurants/
+extraCss:
+  - "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+---
+
+<div class="dest-intro">
+  <div class="container">
+    <p class="dest-breadcrumb">
+      <a href="/london/"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i> London</a>
+      <span>›</span> Restaurants
+    </p>
+    <h1>Restaurants</h1>
+    <p class="dest-intro-desc">Every restaurant below has been independently researched and rated on the Golden Paw Scale. Dogs inside — not just tolerated on the terrace.</p>
+  </div>
+</div>
+
+<section class="venue-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Browse by area</p>
+      <h2>Neighbourhoods</h2>
+    </div>
+    <div class="venue-list">
+      {% for item in london_restaurants %}
+      <a href="/london/restaurants/{{ item.slug }}/" class="dest-subpage-card">
+        <div class="dest-subpage-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+        <h3>{{ item.neighbourhood }}</h3>
+        <span class="dest-card-link">View</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="venue-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">All locations</p>
+      <h2>Map View</h2>
+    </div>
+  </div>
+  <div class="venue-map-wrap">
+    <div id="map"></div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+  const map = L.map('map', { zoomControl: true }).setView([51.510, -0.150], 12);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 18
+  }).addTo(map);
+
+  function makePin(color) {
+    return L.divIcon({
+      className: '',
+      html: `<svg width="28" height="38" viewBox="0 0 28 38" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 0C6.27 0 0 6.27 0 14c0 9.625 14 24 14 24s14-14.375 14-24C28 6.27 21.73 0 14 0z" fill="${color}" stroke="#fff" stroke-width="2"/>
+        <circle cx="14" cy="14" r="5" fill="#fff" opacity="0.9"/>
+      </svg>`,
+      iconSize: [28, 38], iconAnchor: [14, 38], popupAnchor: [0, -40]
+    });
+  }
+
+  const iconMap = { gold: makePin('#C9A045'), silver: makePin('#9B9B9B'), bronze: makePin('#CD7F32') };
+
+  const restaurants = [
+    {% for item in london_restaurants %}{% for venue in item.venues %}
+    { name: {{ venue.name | dump }}, area: {{ item.neighbourhood | dump }}, lat: {{ venue.lat }}, lng: {{ venue.lng }}, rating: {{ venue.rating | dump }}, url: '/london/restaurants/{{ item.slug }}/' },
+    {% endfor %}{% endfor %}
+  ];
+
+  restaurants.forEach(r => {
+    L.marker([r.lat, r.lng], { icon: iconMap[r.rating] || iconMap.gold })
+      .addTo(map)
+      .bindPopup(`<strong>${r.name}</strong><br>${r.area}<br><a href="${r.url}">View →</a>`);
+  });
+</script>

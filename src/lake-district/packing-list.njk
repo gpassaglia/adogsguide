@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: "Lake District Dog Packing List — A Dog's Guide"
+description: "What to pack for a dog-friendly Lake District trip — the gear that actually matters for fell walking with your dog."
+footerType: lake-district
+permalink: /lake-district/packing-list/
+---
+
+<div class="dest-intro">
+  <div class="container">
+    <p class="dest-breadcrumb">
+      <a href="/lake-district/"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Lake District</a>
+      <span>›</span> Packing List
+    </p>
+    <h1>Lake District Dog Packing List</h1>
+    <p class="dest-intro-desc">The gear that matters for fell walking with your dog — the things the general lists don't tell you.</p>
+  </div>
+</div>
+
+<section class="venue-section">
+  <div class="container">
+    <div class="itinerary-stops">
+      {% for item in lake_district_packing %}
+      <div class="itinerary-stop">
+        <p class="itinerary-stop-label">{{ item.label }}</p>
+        <h4>{{ item.name }}</h4>
+        <p>{{ item.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
